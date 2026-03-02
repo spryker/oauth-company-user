@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\CompanyUserTransfer;
 
 interface OauthCompanyUserToCompanyUserFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer|null
-     */
     public function findActiveCompanyUserByUuid(CompanyUserTransfer $companyUserTransfer): ?CompanyUserTransfer;
 
     /**

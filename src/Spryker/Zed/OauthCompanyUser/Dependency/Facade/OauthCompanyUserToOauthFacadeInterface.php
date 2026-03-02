@@ -15,11 +15,6 @@ use Generated\Shared\Transfer\OauthScopeTransfer;
 
 interface OauthCompanyUserToOauthFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\OauthScopeTransfer $oauthScopeTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthScopeTransfer
-     */
     public function saveScope(OauthScopeTransfer $oauthScopeTransfer): OauthScopeTransfer;
 
     /**
@@ -29,18 +24,8 @@ interface OauthCompanyUserToOauthFacadeInterface
      */
     public function getScopesByIdentifiers(array $customerScopes): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthRequestTransfer $oauthRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthResponseTransfer
-     */
     public function processAccessTokenRequest(OauthRequestTransfer $oauthRequestTransfer): OauthResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthAccessTokenValidationRequestTransfer $authAccessTokenValidationRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthAccessTokenValidationResponseTransfer
-     */
     public function validateAccessToken(
         OauthAccessTokenValidationRequestTransfer $authAccessTokenValidationRequestTransfer
     ): OauthAccessTokenValidationResponseTransfer;

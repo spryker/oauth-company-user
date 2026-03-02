@@ -54,11 +54,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
      */
     public const PLUGINS_CUSTOMER_EXPANDER = 'PLUGINS_CUSTOMER_EXPANDER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -74,11 +69,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -88,11 +78,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCompanyUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_COMPANY_USER, function (Container $container) {
@@ -102,11 +87,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addOauthFacade(Container $container): Container
     {
         $container->set(static::FACADE_OAUTH, function (Container $container) {
@@ -116,11 +96,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerFacade(Container $container): Container
     {
         $container->set(static::FACADE_CUSTOMER, function (Container $container) {
@@ -130,11 +105,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {
@@ -144,11 +114,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addOauthCompanyUserIdentifierExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_OAUTH_COMPANY_USER_IDENTIFIER_EXPANDER, function () {
@@ -166,11 +131,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return [];
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerOauthRequestMapperPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CUSTOMER_OAUTH_REQUEST_MAPPER, function () {
@@ -180,11 +140,6 @@ class OauthCompanyUserDependencyProvider extends AbstractBundleDependencyProvide
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CUSTOMER_EXPANDER, function () {

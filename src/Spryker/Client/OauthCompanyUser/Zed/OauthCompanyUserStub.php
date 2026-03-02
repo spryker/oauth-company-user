@@ -18,19 +18,11 @@ class OauthCompanyUserStub implements OauthCompanyUserStubInterface
      */
     protected $zedRequestClient;
 
-    /**
-     * @param \Spryker\Client\OauthCompanyUser\Dependency\Client\OauthCompanyUserToZedRequestClientInterface $zedRequestClient
-     */
     public function __construct(OauthCompanyUserToZedRequestClientInterface $zedRequestClient)
     {
         $this->zedRequestClient = $zedRequestClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerResponseTransfer
-     */
     public function getCustomerByAccessToken(CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer): CustomerResponseTransfer
     {
         /** @var \Generated\Shared\Transfer\CustomerResponseTransfer $customerResponseTransfer */

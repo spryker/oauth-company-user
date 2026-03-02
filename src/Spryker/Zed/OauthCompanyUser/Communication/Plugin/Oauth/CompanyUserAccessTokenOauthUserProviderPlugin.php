@@ -81,11 +81,6 @@ class CompanyUserAccessTokenOauthUserProviderPlugin extends AbstractPlugin imple
         return $oauthUserTransfer;
     }
 
-    /**
-     * @param int $idCompanyUser
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer|null
-     */
     protected function findActiveCompanyUser(int $idCompanyUser): ?CompanyUserTransfer
     {
         $activeCompanyUsersTransfer = $this->getFactory()

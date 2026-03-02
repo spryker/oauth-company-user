@@ -28,11 +28,6 @@ class OauthCompanyUserToOauthFacadeBridge implements OauthCompanyUserToOauthFaca
         $this->oauthFacade = $oauthFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthScopeTransfer $oauthScopeTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthScopeTransfer
-     */
     public function saveScope(OauthScopeTransfer $oauthScopeTransfer): OauthScopeTransfer
     {
         return $this->oauthFacade->saveScope($oauthScopeTransfer);
@@ -48,21 +43,11 @@ class OauthCompanyUserToOauthFacadeBridge implements OauthCompanyUserToOauthFaca
         return $this->oauthFacade->getScopesByIdentifiers($customerScopes);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthRequestTransfer $oauthRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthResponseTransfer
-     */
     public function processAccessTokenRequest(OauthRequestTransfer $oauthRequestTransfer): OauthResponseTransfer
     {
         return $this->oauthFacade->processAccessTokenRequest($oauthRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthAccessTokenValidationRequestTransfer $authAccessTokenValidationRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthAccessTokenValidationResponseTransfer
-     */
     public function validateAccessToken(
         OauthAccessTokenValidationRequestTransfer $authAccessTokenValidationRequestTransfer
     ): OauthAccessTokenValidationResponseTransfer {

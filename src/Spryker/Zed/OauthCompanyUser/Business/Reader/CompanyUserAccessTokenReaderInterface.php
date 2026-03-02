@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\CustomerResponseTransfer;
 
 interface CompanyUserAccessTokenReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerResponseTransfer
-     */
     public function getCustomerByAccessToken(CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer): CustomerResponseTransfer;
 }

@@ -34,13 +34,6 @@ class IdCompanyUserGrantType extends AbstractGrant implements GrantTypeInterface
      */
     protected $userRepository;
 
-    /**
-     * @param \Psr\Http\Message\ServerRequestInterface $request
-     * @param \League\OAuth2\Server\ResponseTypes\ResponseTypeInterface $responseType
-     * @param \DateInterval $accessTokenTTL
-     *
-     * @return \League\OAuth2\Server\ResponseTypes\ResponseTypeInterface
-     */
     public function respondToAccessTokenRequest(
         ServerRequestInterface $request,
         ResponseTypeInterface $responseType,
@@ -109,12 +102,6 @@ class IdCompanyUserGrantType extends AbstractGrant implements GrantTypeInterface
         return OauthCompanyUserConfig::GRANT_TYPE_ID_COMPANY_USER;
     }
 
-    /**
-     * @param string $requestEvent
-     * @param \Psr\Http\Message\ServerRequestInterface $request
-     *
-     * @return \League\OAuth2\Server\RequestEvent
-     */
     protected function createRequestEvent(string $requestEvent, ServerRequestInterface $request): RequestEvent
     {
         return new RequestEvent($requestEvent, $request);

@@ -62,11 +62,6 @@ class CompanyUserAccessTokenReader implements CompanyUserAccessTokenReaderInterf
         $this->customerExpanderPlugins = $customerExpanderPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerResponseTransfer
-     */
     public function getCustomerByAccessToken(CompanyUserAccessTokenRequestTransfer $companyUserAccessTokenRequestTransfer): CustomerResponseTransfer
     {
         $companyUserAccessTokenRequestTransfer->requireAccessToken();
@@ -101,11 +96,6 @@ class CompanyUserAccessTokenReader implements CompanyUserAccessTokenReaderInterf
             ->setHasCustomer(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected function getCustomerByCompanyUserIdentifier(
         CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
     ): CustomerTransfer {
@@ -120,12 +110,6 @@ class CompanyUserAccessTokenReader implements CompanyUserAccessTokenReaderInterf
         return $this->customerFacade->getCustomer($customerTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     * @param \Generated\Shared\Transfer\CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected function executeCustomerExpanderPlugins(
         CustomerTransfer $customerTransfer,
         CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
@@ -137,11 +121,6 @@ class CompanyUserAccessTokenReader implements CompanyUserAccessTokenReaderInterf
         return $customerTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
-     *
-     * @return bool
-     */
     protected function isCompanyUser(CompanyUserIdentifierTransfer $companyUserIdentifierTransfer): bool
     {
         return (bool)$companyUserIdentifierTransfer->getIdCompanyUser();

@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\OauthResponseTransfer;
 
 interface CompanyUserAccessTokenCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthResponseTransfer
-     */
     public function createAccessToken(CustomerTransfer $customerTransfer): OauthResponseTransfer;
 }

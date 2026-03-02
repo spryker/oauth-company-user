@@ -45,11 +45,6 @@ class CompanyUserProvider implements CompanyUserProviderInterface
         $this->oauthCompanyUserIdentifierExpanderPlugins = $oauthCompanyUserIdentifierExpanderPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthUserTransfer $oauthUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthUserTransfer
-     */
     public function getOauthCompanyUser(OauthUserTransfer $oauthUserTransfer): OauthUserTransfer
     {
         $oauthUserTransfer->setIsSuccess(false);
@@ -85,12 +80,6 @@ class CompanyUserProvider implements CompanyUserProviderInterface
         return $companyUserTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthUserTransfer $oauthUserTransfer
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthUserTransfer
-     */
     protected function prepareOauthUserTransfer(OauthUserTransfer $oauthUserTransfer, CompanyUserTransfer $companyUserTransfer): OauthUserTransfer
     {
         $companyUserIdentifierTransfer = (new CompanyUserIdentifierTransfer())
@@ -107,12 +96,6 @@ class CompanyUserProvider implements CompanyUserProviderInterface
         return $oauthUserTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserIdentifierTransfer $companyUserIdentifierTransfer
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserIdentifierTransfer
-     */
     protected function executeExpanderPlugins(
         CompanyUserIdentifierTransfer $companyUserIdentifierTransfer,
         CompanyUserTransfer $companyUserTransfer

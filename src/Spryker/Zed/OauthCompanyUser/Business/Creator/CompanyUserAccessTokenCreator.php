@@ -37,11 +37,6 @@ class CompanyUserAccessTokenCreator implements CompanyUserAccessTokenCreatorInte
         $this->customerOauthRequestMapperPlugins = $customerOauthRequestMapperPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthResponseTransfer
-     */
     public function createAccessToken(CustomerTransfer $customerTransfer): OauthResponseTransfer
     {
         $customerTransfer
@@ -58,12 +53,6 @@ class CompanyUserAccessTokenCreator implements CompanyUserAccessTokenCreatorInte
         return $this->oauthFacade->processAccessTokenRequest($oauthRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthRequestTransfer $oauthRequestTransfer
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthRequestTransfer
-     */
     protected function executeCustomerOauthRequestMapperPlugins(
         OauthRequestTransfer $oauthRequestTransfer,
         CustomerTransfer $customerTransfer

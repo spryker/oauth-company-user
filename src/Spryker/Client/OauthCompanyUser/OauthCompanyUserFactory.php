@@ -30,9 +30,6 @@ class OauthCompanyUserFactory extends AbstractFactory
         return $config;
     }
 
-    /**
-     * @return \Spryker\Client\OauthCompanyUser\Reader\CompanyUserAccessTokenReaderInterface
-     */
     public function createCompanyUserAccessTokenReader(): CompanyUserAccessTokenReaderInterface
     {
         return new CompanyUserAccessTokenReader(
@@ -40,17 +37,11 @@ class OauthCompanyUserFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\OauthCompanyUser\Zed\OauthCompanyUserStubInterface
-     */
     public function createOauthCompanyUserStub(): OauthCompanyUserStubInterface
     {
         return new OauthCompanyUserStub($this->getZedRequestClient());
     }
 
-    /**
-     * @return \Spryker\Client\OauthCompanyUser\Dependency\Client\OauthCompanyUserToZedRequestClientInterface
-     */
     public function getZedRequestClient(): OauthCompanyUserToZedRequestClientInterface
     {
         return $this->getProvidedDependency(OauthCompanyUserDependencyProvider::CLIENT_ZED_REQUEST);

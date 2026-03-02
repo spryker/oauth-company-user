@@ -45,9 +45,6 @@ class OauthCompanyUserFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -72,9 +69,6 @@ class OauthCompanyUserFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCreateCompanyUserAccessToken(): void
     {
         // Arrange
@@ -101,9 +95,6 @@ class OauthCompanyUserFacadeTest extends Unit
         $this->assertTrue($oauthResponseTransfer->getIsValid());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateCompanyUserAccessTokenWithInactiveCompanyUser(): void
     {
         // Arrange
@@ -130,9 +121,6 @@ class OauthCompanyUserFacadeTest extends Unit
         $this->assertFalse($oauthResponseTransfer->getIsValid());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateCompanyUserAccessTokenWithInactiveCompany(): void
     {
         // Arrange
@@ -159,9 +147,6 @@ class OauthCompanyUserFacadeTest extends Unit
         $this->assertFalse($oauthResponseTransfer->getIsValid());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateCompanyUserAccessTokenWithoutIdCompanyUser(): void
     {
         // Arrange
@@ -176,9 +161,6 @@ class OauthCompanyUserFacadeTest extends Unit
             ->createCompanyUserAccessToken($customerTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetCustomerByAccessToken(): void
     {
         // Arrange
@@ -216,9 +198,6 @@ class OauthCompanyUserFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetCustomerByAccessTokenWithInvalidToken(): void
     {
         // Arrange

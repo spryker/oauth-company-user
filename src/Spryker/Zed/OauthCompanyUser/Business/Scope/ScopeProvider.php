@@ -18,9 +18,6 @@ class ScopeProvider implements ScopeProviderInterface
      */
     protected $oauthCompanyUserConfig;
 
-    /**
-     * @param \Spryker\Zed\OauthCompanyUser\OauthCompanyUserConfig $oauthCompanyUserConfig
-     */
     public function __construct(OauthCompanyUserConfig $oauthCompanyUserConfig)
     {
         $this->oauthCompanyUserConfig = $oauthCompanyUserConfig;

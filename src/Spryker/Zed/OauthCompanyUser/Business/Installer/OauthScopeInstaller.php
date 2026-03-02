@@ -23,10 +23,6 @@ class OauthScopeInstaller implements OauthScopeInstallerInterface
      */
     protected $oauthCompanyUserConfig;
 
-    /**
-     * @param \Spryker\Zed\OauthCompanyUser\Dependency\Facade\OauthCompanyUserToOauthFacadeInterface $oauthFacade
-     * @param \Spryker\Zed\OauthCompanyUser\OauthCompanyUserConfig $oauthCompanyUserConfig
-     */
     public function __construct(
         OauthCompanyUserToOauthFacadeInterface $oauthFacade,
         OauthCompanyUserConfig $oauthCompanyUserConfig
@@ -35,9 +31,6 @@ class OauthScopeInstaller implements OauthScopeInstallerInterface
         $this->oauthCompanyUserConfig = $oauthCompanyUserConfig;
     }
 
-    /**
-     * @return void
-     */
     public function install(): void
     {
         $companyUserScopes = $this->oauthCompanyUserConfig->getCompanyUserScopes();

@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\OauthUserTransfer;
 
 interface CompanyUserProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\OauthUserTransfer $oauthUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthUserTransfer
-     */
     public function getOauthCompanyUser(OauthUserTransfer $oauthUserTransfer): OauthUserTransfer;
 }

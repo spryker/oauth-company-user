@@ -18,19 +18,11 @@ class CompanyUserAccessTokenReader implements CompanyUserAccessTokenReaderInterf
      */
     protected $oauthCompanyUserStub;
 
-    /**
-     * @param \Spryker\Client\OauthCompanyUser\Zed\OauthCompanyUserStubInterface $oauthCompanyUserStub
-     */
     public function __construct(OauthCompanyUserStubInterface $oauthCompanyUserStub)
     {
         $this->oauthCompanyUserStub = $oauthCompanyUserStub;
     }
 
-    /**
-     * @param string $accessToken
-     *
-     * @return \Generated\Shared\Transfer\CustomerResponseTransfer
-     */
     public function getCustomerByAccessToken(string $accessToken): CustomerResponseTransfer
     {
         $companyUserAccessTokenRequestTransfer = (new CompanyUserAccessTokenRequestTransfer())
