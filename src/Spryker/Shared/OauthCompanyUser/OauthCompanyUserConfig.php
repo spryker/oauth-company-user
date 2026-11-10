@@ -7,8 +7,8 @@
 
 namespace Spryker\Shared\OauthCompanyUser;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
-class OauthCompanyUserConfig extends AbstractBundleConfig
+class OauthCompanyUserConfig extends AbstractSharedConfig
 {
 }
